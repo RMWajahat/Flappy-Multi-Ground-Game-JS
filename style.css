@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Press Start 2P";
+	outline: none;
+	border: none;
+}
+
+body{
+	position: relative;
+	overflow: hidden;
+}
+
+
+.maps{
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	height: fit-content;
+	width: fit-content;
+	padding: 2vw 1vw;
+	border-radius: 10px;
+	transform: translateX(-16%);
+	background-color: rgb(36, 36, 36);
+	box-shadow: 0 0 10px white;
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+}
+.maps img{
+	height: 20px;
+	cursor: pointer;
+	transition: 200ms ease-out;
+}
+.maps img:hover{
+	scale:1.1;
+	transform: translateX(5%);
+}
+
+
+
+.skins{
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	height: fit-content;
+	width: fit-content;
+	padding: 2vw 1vw;
+	border-radius: 10px;
+	transform: translateX(-16%);
+	background-color: rgb(36, 36, 36);
+	box-shadow: 0 0 10px white;
+	position: absolute;
+	top: 40%;
+	left: 0;
+}
+.skins img{
+	height: 20px;
+	cursor: pointer;
+	transition: 200ms ease-out;
+}
+.skins img:hover{
+	scale:1.1;
+	transform: translateX(5%);
+}
+
+
+
+
+
+
+.background {
+	height: 100vh;
+	width: 100vw;
+	background:url("./images/background-img.png") no-repeat center center fixed;
+    background-size: cover;
+}
+.bird {
+	height: 80px;
+	width: 100px;
+	position: absolute;
+	object-fit: contain;
+	top: 40vh;
+	left: 30vw;
+	z-index: 99999;
+}
+.pipe_sprite {
+	position: absolute;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:radial-gradient(rgb(72, 167, 72) 50%, rgb(7, 89, 119));
+	border: 5px solid rgb(43, 47, 48);
+	border-radius: 5px;
+	z-index: 998;
+}
+.message {
+	position: absolute;
+	z-index: 999999;
+	color: black;
+	top: 50%;
+	left: 50%;
+	font-size: 2.5vw;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+.messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 10px;
+}
+.score {
+	position: fixed;
+	z-index: 99999;
+	height: 10vh;
+	font-size: 2vw;
+	word-spacing: -20px;
+	font-weight: 100;
+	color: white;
+	background: rgb(29, 29, 29);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding: 16px 10px;
+	top: -3%;
+	left: 0;
+	margin: 10px;
+	min-width: 15vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+.score_val {
+	color: rgb(30, 255, 0);
+	font-weight: bold;
+}
+@media only screen and (max-width: 1080px) {
+    .message{
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score{
+		font-size: 8vh;
+	}
+	.bird{
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite{
+		width: 14vw;
+	}
+}
